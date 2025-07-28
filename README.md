@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# Trippcard_Backend
-
-=======
-# Trippcard_Backend
->>>>>>> 59ffdf4e6c9ed2ef5329150e4f487d3d3da09d19
-=======
 # 🧳 Trippcard_backend
 
 An Express.js-based backend for TrippCard — a modern OTA (Online Travel Agency) platform that allows users to search and book flights and hotels using real-time data from the Amadeus API. Built with PostgreSQL, Sequelize, and Node.js.
