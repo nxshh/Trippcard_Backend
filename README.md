@@ -53,5 +53,4 @@ An Express.js-based backend for TrippCard — a modern OTA (Online Travel Agency
 - Once a user selects a hotel or flight:
   - The booking details are stored in the PostgreSQL database.
   - Includes selected item info, timestamp, and optional user/session data.
-
->>>>>>> c9a8bbb697c998f94dfa1fa3d729ae494533d736
+  - 
