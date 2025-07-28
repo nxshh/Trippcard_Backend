@@ -4,18 +4,6 @@ An Express.js-based backend for TrippCard — a modern OTA (Online Travel Agency
 
 ---
 
-## 🚀 Features
-
-- **Live Search for Flights & Hotels** via Amadeus API
-- **Filters** for location, date, and price
-- **Booking Details Saved** to PostgreSQL database
-- Organized folder structure using MVC architecture
-- Built with Express, Sequelize, and PostgreSQL
-- API tested using Postman
-- Environment variables stored securely using `.env`
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend:** Node.js, Express
@@ -53,4 +41,4 @@ An Express.js-based backend for TrippCard — a modern OTA (Online Travel Agency
 - Once a user selects a hotel or flight:
   - The booking details are stored in the PostgreSQL database.
   - Includes selected item info, timestamp, and optional user/session data.
-  - 
+    
