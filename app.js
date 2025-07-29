@@ -1,20 +1,39 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import cors from 'cors'
 import HotelBookingRoutes from './routes/HotelBookingRoutes.js';
 import FlightBookingRoutes from './routes/FlightBookingRoutes.js';
 import FlightSearchRoutes from './routes/FlightSearchRoutes.js';
 import HotelSearchRoutes from './routes/HotelSearchRoutes.js';
+import BookingRoutes from './routes/BookingRoutes.js';
 
 dotenv.config();
 
 const app = express();
-
+app.use(cors()); 
 app.use(express.json());
+
+// Root route for testing
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'Trippcard Backend API is running!',
+    endpoints: {
+      bookings: '/api/bookings',
+      hotelBookings: '/api/hotel/bookings',
+      flightBookings: '/api/flight/bookings',
+      hotelSearch: '/api/hotel/search',
+      flightSearch: '/api/flight/search',
+      hotelsSearch: '/api/hotels/search',
+      flightsSearch: '/api/flights/search'
+    }
+  });
+});
 
 // Routes
 app.use("/api", HotelBookingRoutes);
 app.use("/api", FlightBookingRoutes);
 app.use("/api", FlightSearchRoutes);
 app.use("/api", HotelSearchRoutes);
+app.use("/api", BookingRoutes);
 
 export default app;
