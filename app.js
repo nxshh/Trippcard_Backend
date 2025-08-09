@@ -6,6 +6,7 @@ import FlightBookingRoutes from './routes/FlightBookingRoutes.js';
 import FlightSearchRoutes from './routes/FlightSearchRoutes.js';
 import HotelSearchRoutes from './routes/HotelSearchRoutes.js';
 import BookingRoutes from './routes/BookingRoutes.js';
+import AviationstackRoutes from './routes/AviationstackRoutes.js';
 
 dotenv.config();
 
@@ -24,7 +25,15 @@ app.get('/', (req, res) => {
       hotelSearch: '/api/hotel/search',
       flightSearch: '/api/flight/search',
       hotelsSearch: '/api/hotels/search',
-      flightsSearch: '/api/flights/search'
+      flightsSearch: '/api/flights/search',
+      aviationstack: {
+        realTimeFlights: '/api/aviationstack/flights',
+        airports: '/api/aviationstack/airports',
+        airlines: '/api/aviationstack/airlines',
+        routes: '/api/aviationstack/routes',
+        cities: '/api/aviationstack/cities',
+        countries: '/api/aviationstack/countries'
+      }
     }
   });
 });
@@ -35,5 +44,6 @@ app.use("/api", FlightBookingRoutes);
 app.use("/api", FlightSearchRoutes);
 app.use("/api", HotelSearchRoutes);
 app.use("/api", BookingRoutes);
+app.use("/api/aviationstack", AviationstackRoutes);
 
 export default app;
